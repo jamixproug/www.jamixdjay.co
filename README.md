@@ -21,7 +21,7 @@ For a static site:
 
 ## Before publishing
 Replace:
-- `+256 000 000 000`
+- `+256763873852 
 - `hello@jamixproug.com`
 - WhatsApp number in the `wa.me` link
 - social media `href="#"` links
