@@ -198,6 +198,51 @@
   <div class="container map-wrap reveal"><iframe title="Map of Uganda" src="https://www.google.com/maps?q=Kampala,Uganda&output=embed" loading="lazy"></iframe></div>
 </section>
 </main>
+<!-- ===== MIXES SECTION: paste where you want it on your page ===== -->
+<section id="mixes" class="jk-mixes">
+  <h2>Mixes</h2>
+  <p class="jk-mixes-intro">Press play on a full mix, or watch more on YouTube.</p>
+
+  <!-- Mix 1: audio file. Upload the MP3 to the "assets" folder in your repo -->
+  <article class="jk-mix">
+    <h3>Long Day Drive</h3>
+    <p class="jk-mix-meta">JK Ent UG &middot; 15 min</p>
+    <audio controls preload="none" src="assets/long_day_drive.mp3">
+      Your browser can't play this audio. <a href="assets/long_day_drive.mp3">Download the mix</a>.
+    </audio>
+  </article>
+
+  <!-- More mixes: copy the <article> block above, change the title and file name -->
+
+  <!-- YouTube: shows the latest uploads from your channel -->
+  <div class="jk-yt">
+    <h3>On YouTube</h3>
+    <div class="jk-yt-frame">
+      <iframe
+        src="https://www.youtube.com/embed?listType=playlist&list=UUuQr277r83kB_ZJcb7hwJCg"
+        title="JamixProug on YouTube"
+        loading="lazy"
+        allow="accelerometer; encrypted-media; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <p><a href="https://www.youtube.com/@jamixproug" target="_blank" rel="noopener">See the full channel</a></p>
+  </div>
+</section>
+
+<style>
+  .jk-mixes { max-width: 720px; margin: 3rem auto; padding: 0 1.25rem; }
+  .jk-mixes h2 { margin: 0 0 .25rem; }
+  .jk-mixes-intro { margin: 0 0 1.5rem; opacity: .75; }
+  .jk-mix { margin: 0 0 1.5rem; padding: 1rem 1.1rem; border: 1px solid currentColor; border-color: rgba(128,128,128,.35); border-radius: 10px; }
+  .jk-mix h3 { margin: 0; font-size: 1.1rem; }
+  .jk-mix-meta { margin: .15rem 0 .75rem; opacity: .65; font-size: .9rem; }
+  .jk-mix audio { width: 100%; }
+  .jk-yt { margin-top: 2rem; }
+  .jk-yt h3 { margin: 0 0 .75rem; font-size: 1.1rem; }
+  .jk-yt-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; background: #000; }
+  .jk-yt-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+</style>
+<!-- ===== END MIXES SECTION ===== -->
 
 <footer class="footer">
   <div class="container footer-grid">
