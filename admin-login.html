@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJ Jamix Pro UG — Admin Login</title>
+<style>
+  :root {
+    --bg: #0b0b0d;
+    --panel: #141417;
+    --panel-edge: #232329;
+    --field: #1c1c21;
+    --text: #f2efe9;
+    --text-dim: #8a8a92;
+    --label: #8b2635;
+    --amber: #ffb84d;
+    --error: #ff6b6b;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+      radial-gradient(circle at 50% 0%, #1a1a1f 0%, var(--bg) 60%);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  .panel {
+    width: 320px;
+    padding: 40px 32px 32px;
+    background: var(--panel);
+    border: 1px solid var(--panel-edge);
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0,0,0,.55);
+    animation: rise .6s cubic-bezier(.2,.8,.2,1);
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Signature: a spinning vinyl record standing in for a "lamp" */
+  .vinyl {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background:
+      repeating-radial-gradient(circle, #1a1a1d 0 2px, #232326 2px 4px);
+    box-shadow: 0 0 0 2px #2a2a2e, 0 8px 24px rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 6s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .vinyl::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--label);
+    box-shadow: 0 0 14px rgba(139,38,53,.7), inset 0 0 0 2px rgba(255,184,77,.4);
+  }
+
+  h2 {
+    margin: 0 0 4px;
+    font-size: 20px;
+    letter-spacing: .3px;
+  }
+
+  .sub {
+    margin: 0 0 24px;
+    font-size: 12.5px;
+    color: var(--text-dim);
+    letter-spacing: .4px;
+  }
+
+  form { text-align: left; }
+
+  label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--text-dim);
+    margin: 14px 0 6px;
+  }
+
+  input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--panel-edge);
+    border-radius: 8px;
+    background: var(--field);
+    color: var(--text);
+    outline: none;
+    font-size: 14px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+
+  input:focus {
+    border-color: var(--amber);
+    box-shadow: 0 0 0 3px rgba(255,184,77,.15);
+  }
+
+  .error {
+    min-height: 18px;
+    font-size: 12.5px;
+    color: var(--error);
+    margin-top: 10px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, var(--label), #5e1a24);
+    color: var(--text);
+    font-weight: 600;
+    letter-spacing: .3px;
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+  }
+
+  button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(139,38,53,.4);
+  }
+
+  button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+</style>
+</head>
+<body>
+
+  <div class="panel">
+    <div class="vinyl"></div>
+    <h2>Mr Vibe Admin</h2>
+    <p class="sub">DJ Jamix Pro UG · control room</p>
+
+    <form id="loginForm">
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" autocomplete="username" required>
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required>
+
+      <div class="error" id="errorMsg"></div>
+
+      <button type="submit" id="loginBtn">Login</button>
+    </form>
+  </div>
+
+  <script>
+    const API_BASE = 'https://www-jamixdjay1-com.onrender.com';
+
+    const form = document.getElementById('loginForm');
+    const btn = document.getElementById('loginBtn');
+    const errorMsg = document.getElementById('errorMsg');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      errorMsg.textContent = '';
+
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value;
+
+      if (!username || !password) {
+        errorMsg.textContent = 'Enter both username and password.';
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = 'Logging in…';
+
+      try {
+        const res = await fetch(`${API_BASE}/api/admin/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ username, password })
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (!res.ok) {
+          throw new Error(data.message || 'Invalid username or password.');
+        }
+
+        if (data.token) {
+          sessionStorage.setItem('adminToken', data.token);
+        }
+
+        window.location.href = 'admin.html';
+
+      } catch (err) {
+        errorMsg.textContent = err.message || 'Login failed. Please try again.';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Login';
+      }
+    });
+  </script>
+
+</body>
+</html>
