@@ -1,263 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="JAMIX PRO UG — professional, innovative and customer-focused services in Uganda.">
-  <meta name="theme-color" content="#07111f">
-  <title>JAMIX PRO UG | Professional Solutions in Uganda</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KALU OFFICIAL · Music • Life • Vibes</title>
+<meta name="description" content="Official website of KALU OFFICIAL from Kampala, Uganda. Music, videos and vibes.">
+<style>
+  :root{--bg:#0d0d12;--card:#17171f;--text:#f4f4f8;--muted:#a0a0b3;--accent:#ff3d71;--accent2:#7c4dff;--line:#262633}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+  a{color:inherit}
+  header{position:sticky;top:0;z-index:10;background:rgba(13,13,18,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .bar{max-width:1000px;margin:auto;padding:12px 16px;display:flex;justify-content:space-between;align-items:center}
+  .logo{font-weight:800;letter-spacing:.08em}
+  nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-size:.9rem}
+  nav a:hover{color:var(--text)}
+  .hero{text-align:center;padding:80px 16px 60px;background:radial-gradient(circle at 50% 0,rgba(124,77,255,.35),transparent 60%)}
+  .hero h1{font-size:clamp(2.4rem,9vw,4.5rem);margin:0;letter-spacing:.06em}
+  .hero p{color:var(--muted);margin:8px 0}
+  .tag{font-size:1.1rem;color:var(--text)}
+  .btn{display:inline-block;margin:16px 6px 0;padding:12px 22px;border-radius:999px;border:0;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;color:#fff;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+  .btn.ghost{background:transparent;border:1px solid var(--line)}
+  section{max-width:1000px;margin:auto;padding:48px 16px}
+  h2{margin:0 0 20px;font-size:1.6rem}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .card .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--accent2),var(--accent));display:flex;align-items:center;justify-content:center;font-size:2.2rem}
+  .card .thumb img,.card iframe{width:100%;height:100%;object-fit:cover;border:0;display:block}
+  .card .body{padding:12px 14px}
+  .card h3{margin:0 0 4px;font-size:1rem}
+  .card p{margin:0 0 8px;color:var(--muted);font-size:.88rem}
+  .card a.play{color:var(--accent);font-weight:600;text-decoration:none;font-size:.9rem}
+  .empty{color:var(--muted)}
+  form{display:grid;gap:10px;max-width:520px}
+  input,textarea{font:inherit;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--text);width:100%}
+  .hp{position:absolute;left:-9999px}
+  .msg{min-height:1.4em;font-size:.92rem}
+  .ok{color:#4cd98a}.bad{color:#ff6b6b}
+  .contact-info{color:var(--muted);margin-bottom:16px}
+  .about{display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap}
+  .about img{width:min(260px,100%);border-radius:16px;object-fit:cover}
+  .about p{flex:1;min-width:240px;margin:0;white-space:pre-line;color:var(--muted);font-size:1.05rem}
+  .gal{border-radius:12px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+  .gal img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+  .gal span{display:block;padding:8px 10px;font-size:.85rem;color:var(--muted)}
+  footer{text-align:center;color:var(--muted);padding:32px 16px;border-top:1px solid var(--line);font-size:.88rem}
+</style>
 </head>
 <body>
-<header class="site-header" id="top">
-  <nav class="nav container">
-    <a class="brand" href="#home" aria-label="JAMIX PRO UG home">
-      <span class="brand-logo"><img src="assets/jk-logo.jpg" alt="JAMIX PRO UG logo"></span><span>JAMIX <b>PRO</b> <em>UG</em></span>
-    </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
-    <div class="nav-links" id="navLinks">
-      <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a><a href="#music">Music</a><a href="#youtube">YouTube</a><a href="#news">News</a><a href="#contact" class="nav-cta">Contact</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
-    </div>
-  </nav>
-</header>
+<header><div class="bar">
+  <div class="logo">KALU</div>
+  <nav><a href="#about">About</a><a href="#music">Music</a><a href="#videos">Videos</a><a href="#gallery">Gallery</a><a href="#fans">Join</a><a href="#contact">Contact</a></nav>
+</div></header>
 
-<main>
-<section class="hero" id="home">
-  <div class="hero-overlay"></div>
-  <div class="container hero-content reveal">
-    <p class="eyebrow">UGANDA • PROFESSIONAL • INNOVATIVE</p>
-    <h1>Ideas that move<br><span>business forward.</span></h1>
-    <p class="hero-copy">JAMIX PRO UG brings together entertainment, DJ services, event promotion, digital creativity and professional brand solutions designed to make every project stand out.</p>
-    <div class="hero-actions">
-      <a class="btn btn-gold" href="#services">Get Started <i class="fa-solid fa-arrow-right"></i></a>
-      <a class="btn btn-outline" href="#contact">Contact Us</a>
-    </div>
-    <div class="hero-stats">
-      <div><strong>100%</strong><small>Customer Focus</small></div>
-      <div><strong>UG</strong><small>Based in Uganda</small></div>
-      <div><strong>24/7</strong><small>Ideas & Support</small></div>
-    </div>
-  </div>
+<div class="hero">
+  <h1>KALU OFFICIAL</h1>
+  <p class="tag">Music • Life • Vibes</p>
+  <p>Kampala, Uganda · “Just being me” · “One day at a time”</p>
+  <a class="btn" href="#music">Listen now</a>
+  <a class="btn ghost" href="https://www.tiktok.com/@iamkalu.official" target="_blank" rel="noopener">Follow on TikTok</a>
+</div>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="about"><img id="aboutPhoto" alt="KALU" hidden><p id="aboutText"></p></div>
 </section>
 
-<section class="section intro" id="about">
-  <div class="container split">
-    <div class="section-image reveal">
-      <div class="image-card about-photo"><img src="assets/team-portrait.jpg" alt="JAMIX PRO UG team member"><div class="image-badge"><strong>JAMIX</strong><span>PRO UG</span></div></div>
-    </div>
-    <div class="reveal">
-      <p class="eyebrow">ABOUT JAMIX PRO UG</p>
-      <h2>Built around <span>your success.</span></h2>
-      <p>JAMIX PRO UG is a Uganda-based company focused on delivering professional solutions with creativity, quality and dependable service at the center of every project.</p>
-      <p>We combine modern thinking with practical execution to help individuals, organizations and brands turn ideas into results.</p>
-      <div class="values">
-        <div><i class="fa-solid fa-bullseye"></i><div><b>Mission</b><p>Deliver quality solutions that create meaningful value for our clients.</p></div></div>
-        <div><i class="fa-solid fa-eye"></i><div><b>Vision</b><p>Build a trusted Ugandan brand recognized for innovation and excellence.</p></div></div>
-      </div>
-    </div>
-  </div>
+<section id="music"><h2>🎵 Music</h2><div class="grid" id="musicGrid"><p class="empty">Loading…</p></div></section>
+<section id="videos"><h2>🎬 Videos</h2><div class="grid" id="videoGrid"><p class="empty">Loading…</p></div></section>
+
+<section id="gallery"><h2>📸 Gallery</h2><div class="grid" id="galGrid"><p class="empty">Loading…</p></div></section>
+
+<section id="fans">
+  <h2>Join the fan list</h2>
+  <p class="contact-info">Get news on new music and videos.</p>
+  <form id="subForm">
+    <input type="email" name="email" placeholder="Your email" required>
+    <button class="btn" type="submit" style="margin:0">Subscribe</button>
+    <div class="msg" id="subMsg"></div>
+  </form>
 </section>
 
-<section class="section team-section" id="team">
-  <div class="container">
-    <div class="section-heading center reveal"><p class="eyebrow">THE PEOPLE BEHIND THE BRAND</p><h2>Meet the <span>team</span></h2><p>Use these profile images for JAMIX PRO UG and replace the role labels with the official team structure.</p></div>
-    <div class="team-grid">
-      <article class="team-card reveal"><div class="team-photo"><img src="assets/jamix-portrait.jpg" alt="JAMIX PRO UG profile"></div><div><h3>JAMIX DJAY</h3><p>Creative Lead / DJ</p></div></article>
-      <article class="team-card reveal"><div class="team-photo"><img src="assets/team-portrait.jpg" alt="JAMIX PRO UG team member"></div><div><h3>JAMIX PRO UG</h3><p>Team Member</p></div></article>
-      <article class="team-card reveal"><div class="team-photo logo-photo"><img src="assets/jk-logo.jpg" alt="JK Entertainment DJAY logo"></div><div><h3>JK Entertainment</h3><p>Entertainment Brand</p></div></article>
-    </div>
-  </div>
+<section id="contact">
+  <h2>Contact</h2>
+  <p class="contact-info">
+    Email: <a href="mailto:Kalulejamir33@gmail.com">Kalulejamir33@gmail.com</a><br>
+    Phone: <a href="tel:0763873852">0763873852</a>
+  </p>
+  <form id="contactForm">
+    <input name="name" placeholder="Your name" required maxlength="100">
+    <input type="email" name="email" placeholder="Your email" required>
+    <input name="subject" placeholder="Subject (optional)" maxlength="150">
+    <textarea name="message" rows="5" placeholder="Your message" required maxlength="3000"></textarea>
+    <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <button class="btn" type="submit" style="margin:0">Send message</button>
+    <div class="msg" id="contactMsg"></div>
+  </form>
 </section>
 
-<section class="section dark-section" id="services">
-  <div class="container">
-    <div class="section-heading center reveal"><p class="eyebrow">WHAT WE DO</p><h2>Professional <span>services</span></h2><p>Flexible solutions tailored to your goals.</p></div>
-    <div class="cards services-grid">
-      <article class="service-card reveal"><i class="fa-solid fa-laptop-code"></i><h3>Digital Solutions</h3><p>Modern websites, digital experiences and technology solutions that help your brand perform online.</p><a href="#contact">Explore <i class="fa-solid fa-arrow-right"></i></a></article>
-      <article class="service-card reveal"><i class="fa-solid fa-bullhorn"></i><h3>Brand & Marketing</h3><p>Creative branding, campaigns and promotional concepts designed to connect with your audience.</p><a href="#contact">Explore <i class="fa-solid fa-arrow-right"></i></a></article>
-      <article class="service-card reveal"><i class="fa-solid fa-camera-retro"></i><h3>Media & Content</h3><p>Professional visual content, event coverage and creative production for memorable communication.</p><a href="#contact">Explore <i class="fa-solid fa-arrow-right"></i></a></article>
-      <article class="service-card reveal"><i class="fa-solid fa-lightbulb"></i><h3>Consulting</h3><p>Practical guidance and strategy to help turn business ideas into focused, achievable action.</p><a href="#contact">Explore <i class="fa-solid fa-arrow-right"></i></a></article>
-    </div>
-    <div class="pricing reveal">
-      <div><span>STARTER</span><strong>Custom Quote</strong><small>For focused projects and individuals</small></div>
-      <div class="featured"><span>BUSINESS</span><strong>Custom Quote</strong><small>For growing brands and organizations</small></div>
-      <div><span>PREMIUM</span><strong>Custom Quote</strong><small>For larger, tailored solutions</small></div>
-    </div>
-  </div>
-</section>
+<footer>© <span id="yr"></span> KALU OFFICIAL · Kampala, Uganda</footer>
 
-<section class="section" id="portfolio">
-  <div class="container">
-    <div class="section-heading reveal"><p class="eyebrow">OUR WORK</p><h2>Selected <span>projects</span></h2><p>Replace these demo projects with your real JAMIX PRO UG portfolio.</p></div>
-    <div class="filters reveal">
-      <button class="filter active" data-filter="all">All</button><button class="filter" data-filter="digital">Digital</button><button class="filter" data-filter="brand">Branding</button><button class="filter" data-filter="media">Media</button>
-    </div>
-    <div class="portfolio-grid">
-      <button class="project reveal" data-category="digital" data-title="Karaoke Night Campaign" data-desc="A polished digital presence designed for a modern Ugandan brand."><span class="project-img user-poster poster1"></span><span><b>Karaoke Night Campaign</b><small>Digital</small></span></button>
-      <button class="project reveal" data-category="brand" data-title="Candle Night Campaign" data-desc="A clean identity system built around clarity, recognition and consistency."><span class="project-img user-poster poster2"></span><span><b>Candle Night Campaign</b><small>Branding</small></span></button>
-      <button class="project reveal" data-category="media" data-title="DJ Profile" data-desc="A visual campaign concept created to make a brand impossible to ignore."><span class="project-img user-poster portrait1"></span><span><b>DJ Profile</b><small>Media</small></span></button>
-      <button class="project reveal" data-category="digital" data-title="Creative Portrait" data-desc="A responsive platform concept with an emphasis on speed and usability."><span class="project-img user-poster portrait2"></span><span><b>Creative Portrait</b><small>Digital</small></span></button>
-      <button class="project reveal" data-category="brand" data-title="JK Entertainment Logo" data-desc="Professional visual direction for a customer-focused organization."><span class="project-img user-poster logo1"></span><span><b>JK Entertainment Logo</b><small>Branding</small></span></button>
-      <button class="project reveal" data-category="media" data-title="Event Promotion" data-desc="High-impact promotional visuals for an event and entertainment campaign."><span class="project-img user-poster poster1"></span><span><b>Event Promotion</b><small>Media</small></span></button>
-    </div>
-  </div>
-</section>
+<script>
+const API = ''; // same server. If hosted elsewhere, put the backend URL here.
+document.getElementById('yr').textContent = new Date().getFullYear();
 
-<section class="section light-section" id="news">
-  <div class="container">
-    <div class="section-heading center reveal"><p class="eyebrow">JAMIX PRO UG</p><h2>News & <span>updates</span></h2></div>
-    <div class="news-tools"><div class="search"><i class="fa-solid fa-search"></i><input id="newsSearch" placeholder="Search articles..."></div><select id="newsCategory"><option value="all">All categories</option><option value="business">Business</option><option value="digital">Digital</option><option value="creative">Creative</option></select></div>
-    <div class="news-grid" id="newsGrid">
-      <article class="news-card reveal" data-category="digital"><div class="news-img n1"></div><div class="news-body"><span>Digital</span><h3>Why a strong online presence matters</h3><p>Practical ways businesses can make their digital presence clearer and more effective.</p><a href="#contact">Read more →</a></div></article>
-      <article class="news-card reveal" data-category="business"><div class="news-img n2"></div><div class="news-body"><span>Business</span><h3>Building trust through consistency</h3><p>How consistent communication can strengthen customer relationships over time.</p><a href="#contact">Read more →</a></div></article>
-      <article class="news-card reveal" data-category="creative"><div class="news-img n3"></div><div class="news-body"><span>Creative</span><h3>Turning ideas into memorable content</h3><p>Simple creative principles that help brands communicate with more impact.</p><a href="#contact">Read more →</a></div></article>
-    </div>
-  </div>
-</section>
-
-<section class="section testimonials">
-  <div class="container">
-    <div class="section-heading center reveal"><p class="eyebrow">CLIENT VOICE</p><h2>What clients <span>say</span></h2></div>
-    <div class="testimonial-grid">
-      <blockquote class="quote reveal"><div class="stars">★★★★★</div><p>“JAMIX PRO UG brought a professional approach from the first conversation to the final delivery.”</p><footer>— Client Name <small>Business Owner</small></footer></blockquote>
-      <blockquote class="quote reveal"><div class="stars">★★★★★</div><p>“Creative, responsive and focused on what we actually needed. The experience was excellent.”</p><footer>— Client Name <small>Organization</small></footer></blockquote>
-      <blockquote class="quote reveal"><div class="stars">★★★★★</div><p>“A reliable partner with fresh ideas and a strong customer-first attitude.”</p><footer>— Client Name <small>Brand Manager</small></footer></blockquote>
-    </div>
-  </div>
-</section>
-
-
-<section class="section music-section" id="music">
-  <div class="container">
-    <div class="section-heading center reveal">
-      <p class="eyebrow">UGANDA VIBES 🇺🇬</p>
-      <h2>Fresh Ugandan <span>sounds</span></h2>
-      <p>A rotating selection of current Ugandan tracks to bring more Kampala energy to the JAMIX PRO UG experience.</p>
-    </div>
-    <div class="music-layout">
-      <div class="music-list reveal">
-        <a class="track" href="https://open.spotify.com/search/YoYo%20Joshua%20Baraka" target="_blank" rel="noopener">
-          <span class="track-no">01</span><span class="track-info"><b>YoYo</b><small>Joshua Baraka</small></span><i class="fa-solid fa-play"></i>
-        </a>
-        <a class="track" href="https://open.spotify.com/search/Wewe%20King%20Saha" target="_blank" rel="noopener">
-          <span class="track-no">02</span><span class="track-info"><b>Wewe</b><small>King Saha</small></span><i class="fa-solid fa-play"></i>
-        </a>
-        <a class="track" href="https://open.spotify.com/search/Go%20Remix%20Karole%20Kasita%20Elijah%20Kitaka" target="_blank" rel="noopener">
-          <span class="track-no">03</span><span class="track-info"><b>Go - Remix</b><small>Karole Kasita ft. Elijah Kitaka</small></span><i class="fa-solid fa-play"></i>
-        </a>
-        <a class="track" href="https://open.spotify.com/search/Stress%20Killer%20Sheebah" target="_blank" rel="noopener">
-          <span class="track-no">04</span><span class="track-info"><b>Stress Killer</b><small>Sheebah</small></span><i class="fa-solid fa-play"></i>
-        </a>
-        <a class="track" href="https://open.spotify.com/search/Toma%20Nessim%20Vyroota" target="_blank" rel="noopener">
-          <span class="track-no">05</span><span class="track-info"><b>Toma</b><small>Nessim & Vyroota</small></span><i class="fa-solid fa-play"></i>
-        </a>
-        <a class="track" href="https://open.spotify.com/search/Finally%20Spice%20Diana" target="_blank" rel="noopener">
-          <span class="track-no">06</span><span class="track-info"><b>Finally</b><small>Spice Diana</small></span><i class="fa-solid fa-play"></i>
-        </a>
-      </div>
-      <div class="spotify-box reveal">
-        <p class="eyebrow">JAMIX PRO UG PLAYLIST</p>
-        <h3>Play the Uganda mix</h3>
-        <p>Tap a track to open it on Spotify. The website doesn't host copyrighted music files.</p>
-        <iframe title="Ugandan music playlist" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX2gefVxxjXax?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-band">
-  <div class="container cta-inner reveal"><div><p class="eyebrow">LET'S WORK TOGETHER</p><h2>Have an idea? Let's build it.</h2></div><a href="#contact" class="btn btn-gold">Start a Project <i class="fa-solid fa-arrow-right"></i></a></div>
-</section>
-
-<section class="section contact-section" id="contact">
-  <div class="container split contact-split">
-    <div class="reveal">
-      <p class="eyebrow">CONTACT JAMIX PRO UG</p><h2>Let's talk about <span>your project.</span></h2>
-      <p>Update the placeholders below with your official JAMIX PRO UG contact details and social accounts.</p>
-      <div class="contact-list">
-        <a href="tel:+256000000000"><i class="fa-solid fa-phone"></i><span><small>Phone</small>+256 763 873 852</span></a>
-        <a href="mailto:jamixproug@gmail.com"><i class="fa-solid fa-envelope"></i><span><small>Email</small>jamixproug@gmail.com</span></a>
-        <div><i class="fa-solid fa-location-dot"></i><span><small>Location</small>Uganda</span></div>
-      </div>
-      <div class="socials"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.tiktok.com/@jamixproug11" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a><a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a></div>
-    </div>
-    <form class="contact-form reveal" id="contactForm">
-      <div class="form-row"><label>Full name<input required name="name" placeholder="Your name"></label><label>Email<input required type="email" name="email" placeholder="you@example.com"></label></div>
-      <label>Subject<input required name="subject" placeholder="How can we help?"></label>
-      <label>Message<textarea required name="message" rows="6" placeholder="Tell us about your project..."></textarea></label>
-      <button class="btn btn-dark" type="submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
-      <p class="form-note" id="formNote"></p>
-    </form>
-  </div>
-  <div class="container map-wrap reveal"><iframe title="Map of Uganda" src="https://www.google.com/maps?q=Kampala,Uganda&output=embed" loading="lazy"></iframe></div>
-</section>
-</main>
-<!-- ===== MIXES SECTION: paste where you want it on your page ===== -->
-<section id="mixes" class="jk-mixes">
-  <h2>Mixes</h2>
-  <p class="jk-mixes-intro">Press play on a full mix, or watch more on YouTube.</p>
-
-  <!-- Mix 1: audio file. Upload the MP3 to the "assets" folder in your repo -->
-  <article class="jk-mix">
-    <h3>Long Day Drive</h3>
-    <p class="jk-mix-meta">JK Ent UG &middot; 15 min</p>
-    <audio controls preload="none" src="assets/long_day_drive.mp3">
-      Your browser can't play this audio. <a href="assets/long_day_drive.mp3">Download the mix</a>.
-    </audio>
-  </article>
-
-  <!-- More mixes: copy the <article> block above, change the title and file name -->
-
-  <!-- YouTube: shows the latest uploads from your channel -->
-  <div class="jk-yt">
-    <h3>On YouTube</h3>
-    <div class="jk-yt-frame">
-      <iframe
-        src="https://www.youtube.com/embed?listType=playlist&list=UUuQr277r83kB_ZJcb7hwJCg"
-        title="JamixProug on YouTube"
-        loading="lazy"
-        allow="accelerometer; encrypted-media; picture-in-picture"
-        allowfullscreen></iframe>
-    </div>
-    <p><a href="https://www.youtube.com/@jamixproug" target="_blank" rel="noopener">See the full channel</a></p>
-  </div>
-</section>
-
-<style>
-  .jk-mixes { max-width: 720px; margin: 3rem auto; padding: 0 1.25rem; }
-  .jk-mixes h2 { margin: 0 0 .25rem; }
-  .jk-mixes-intro { margin: 0 0 1.5rem; opacity: .75; }
-  .jk-mix { margin: 0 0 1.5rem; padding: 1rem 1.1rem; border: 1px solid currentColor; border-color: rgba(128,128,128,.35); border-radius: 10px; }
-  .jk-mix h3 { margin: 0; font-size: 1.1rem; }
-  .jk-mix-meta { margin: .15rem 0 .75rem; opacity: .65; font-size: .9rem; }
-  .jk-mix audio { width: 100%; }
-  .jk-yt { margin-top: 2rem; }
-  .jk-yt h3 { margin: 0 0 .75rem; font-size: 1.1rem; }
-  .jk-yt-frame { position: relative; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; background: #000; }
-  .jk-yt-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
-</style>
-<!-- ===== END MIXES SECTION ===== -->
-
-<footer class="footer">
-  <div class="container footer-grid">
-    <div><a class="brand" href="#home"><span class="brand-logo"><img src="assets/jk-logo.jpg" alt="JAMIX PRO UG logo"></span><span>JAMIX <b>PRO</b> <em>UG</em></span></a><p>Professional solutions. Innovative thinking. Customer-focused results.</p></div>
-    <div><h4>Quick Links</h4><a href="#about">About</a><a href="#services">Services</a><a href="#team">Team</a><a href="#portfolio">Portfolio</a><a href="#music">Music</a><a href="#youtube">YouTube</a><a href="#news">News</a></div>
-    <div><h4>Contact</h4><a href="tel:+256000000000">+256 763 873 852</a><a href="mailto:jamixproug@gmail.com">jamixproug@gmail.com</a><span>Uganda</span></div>
-    <div><h4>Stay Updated</h4><p>Subscribe for news and offers.</p><form class="newsletter" id="newsletterForm"><input type="email" required placeholder="Email address"><button aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button></form></div>
-  </div>
-  <div class="container footer-bottom"><span>© 2026 JAMIX PRO UG. All rights reserved.</span><span><a href="#">Privacy Policy</a> · <a href="#">Terms</a></span></div>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/256763873852?text=Hello%20JAMIX%20PRO%20UG%2C%20I%27d%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-<button class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
-
-<div class="modal" id="projectModal" aria-hidden="true"><div class="modal-card"><button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button><div class="modal-image" id="modalImage"></div><div class="modal-content"><p class="eyebrow">PROJECT</p><h2 id="modalTitle"></h2><p id="modalDesc"></p><a href="#contact" class="btn btn-gold" id="modalContact">Discuss a similar project</a></div></div></div>
-<script src="script.js"></script>
+function el(tag, text, cls) {
+  const e = document.createElement(tag);
+  if (text) e.textContent = text;
+  if (cls) e.className = cls;
+  return e;
+}
+function youtubeEmbed(url) {
+  try {
+    const u = new URL(url);
+    let id = '';
+    if (u.hostname.includes('youtu.be')) id = u.pathname.slice(1);
+    else if (u.hostname.includes('youtube.com')) id = u.searchParams.get('v') || u.pathname.split('/').pop();
+    return /^[\w-]{6,20}$/.test(id) ? 'https://www.youtube.com/embed/' + id : null;
+  } catch { return null; }
+}
+function mediaCard(m) {
+  const card = el('div', undefined, 'card');
+  const thumb = el('div', undefined, 'thumb');
+  const embed = m.type === 'video' ? youtubeEmbed(m.url) : null;
+  if (embed) {
+    const f = document.createElement('iframe');
+    f.src = embed; f.loading = 'lazy'; f.title = m.title;
+    f.allow = 'accelerometer; encrypted-media; picture-in-picture'; f.allowFullscreen = true;
+    thumb.append(f);
+  } else if (m.cover) {
+    const i = document.createElement('img');
+    i.src = m.cover.startsWith('/') ? API + m.cover : m.cover; i.alt = m.title; i.loading = 'lazy';
+    thumb.append(i);
+  } else {
+    thumb.textContent = m.type === 'music' ? '🎵' : '🎬';
+  }
+  const body = el('div', undefined, 'body');
+  body.append(el('h3', m.title));
+  if (m.description) body.append(el('p', m.description));
+  const a = el('a', m.type === 'music' ? '▶ Listen' : '▶ Watch', 'play');
+  a.href = m.url; a.target = '_blank'; a.rel = 'noopener';
+  body.append(a);
+  card.append(thumb, body);
+  return card;
+}
+async function loadMedia() {
+  const targets = { music: 'musicGrid', video: 'videoGrid' };
+  try {
+    const list = await (await fetch(API + '/api/media')).json();
+    for (const [type, id] of Object.entries(targets)) {
+      const grid = document.getElementById(id);
+      grid.replaceChildren();
+      const items = list.filter((m) => m.type === type);
+      if (!items.length) grid.append(el('p', 'Coming soon…', 'empty'));
+      items.forEach((m) => grid.append(mediaCard(m)));
+    }
+  } catch {
+    Object.values(targets).forEach((id) => {
+      const g = document.getElementById(id);
+      g.replaceChildren(el('p', 'Could not load right now.', 'empty'));
+    });
+  }
+}
+async function submitForm(form, url, msgEl) {
+  const msg = document.getElementById(msgEl);
+  msg.className = 'msg'; msg.textContent = 'Sending…';
+  try {
+    const res = await fetch(API + url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(Object.fromEntries(new FormData(form)))
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Something went wrong.');
+    msg.className = 'msg ok'; msg.textContent = data.message || 'Done!';
+    form.reset();
+  } catch (e) {
+    msg.className = 'msg bad'; msg.textContent = e.message;
+  }
+}
+document.getElementById('contactForm').addEventListener('submit', (e) => { e.preventDefault(); submitForm(e.target, '/api/contact', 'contactMsg'); });
+document.getElementById('subForm').addEventListener('submit', (e) => { e.preventDefault(); submitForm(e.target, '/api/subscribe', 'subMsg'); });
+async function loadAbout() {
+  try {
+    const a = await (await fetch(API + '/api/about')).json();
+    document.getElementById('aboutText').textContent = a.text;
+    if (a.photo) {
+      const img = document.getElementById('aboutPhoto');
+      img.src = a.photo.startsWith('/') ? API + a.photo : a.photo; img.hidden = false;
+    }
+  } catch {}
+}
+async function loadGallery() {
+  const grid = document.getElementById('galGrid');
+  try {
+    const list = await (await fetch(API + '/api/gallery')).json();
+    grid.replaceChildren();
+    if (!list.length) grid.append(el('p', 'Photos coming soon…', 'empty'));
+    list.forEach((g) => {
+      const f = el('div', undefined, 'gal');
+      const i = document.createElement('img');
+      i.src = g.image_url.startsWith('/') ? API + g.image_url : g.image_url;
+      i.alt = g.caption || 'KALU photo'; i.loading = 'lazy';
+      f.append(i);
+      if (g.caption) f.append(el('span', g.caption));
+      grid.append(f);
+    });
+  } catch { grid.replaceChildren(el('p', 'Could not load right now.', 'empty')); }
+}
+loadAbout(); loadGallery(); loadMedia();
+</script>
 </body>
 </html>
